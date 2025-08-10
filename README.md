@@ -38,8 +38,8 @@ To explore how movements in global energy markets influence domestic production 
 5. To run the analysis interactively, open the R Markdown file in RStudio.
 
 ## Featured Notebooks/Analysis/Deliverables
-* [EDA Analysis R Markdown File](EDA.Rmd)
-* [EDA Analysis HTML Report](EDA.html)
+* [EDA Analysis R Markdown File](notebooks/EDA.Rmd)
+* [EDA Analysis HTML Report](notebooks/EDA.html)
 
 
 ## Team Contacts
