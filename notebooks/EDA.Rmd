@@ -1,7 +1,10 @@
 ---
-title: "EDA"
-output: html_document
-date: "2025-08-10"
+title: "EDA Code Notebook"
+author: "Kimberly Cardinale, Noelle Crichton, and William Kong"
+date: "2025-07-17"
+output:
+  html_document: default
+  pdf_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -42,10 +45,10 @@ Below is a quick roadmap of the notebook to guide readers:
 
 ```{r load, echo=FALSE, message=FALSE, warning=FALSE}
 # Load IMF commodity price data
-Commodity <- read.csv("https://raw.githubusercontent.com/kimcardinale/qtm302w-eda-project/refs/heads/main/data/raw/Commodity.csv")
+Commodity <- read.csv("https://raw.githubusercontent.com/william-dk/revised_eda/refs/heads/main/data/raw/Commodity.csv")
 
 # Load U.S. Producer Price Index (PPI) data from FRED
-PPI <- read.csv("https://raw.githubusercontent.com/kimcardinale/qtm302w-eda-project/refs/heads/main/data/raw/PPI.csv")
+PPI <- read.csv("https://raw.githubusercontent.com/william-dk/revised_eda/refs/heads/main/data/raw/PPI.csv")
 
 cat("The raw commodity price and PPI datasets have been successfully loaded.\nReady for data cleaning and merging in the next step.\n")
 ```
@@ -94,8 +97,6 @@ merged_data <- inner_join(energy_data, PPI, by = "Date")%>%
 
 # Preview merged data
 head(merged_data)
-
-write.csv(merged_data, "/Users/mac/Documents/qtm302w-eda-project/data/processed/merged_data.csv", row.names = FALSE)
 ```
 
 ## 4. Understanding the Dataset: Summary Statistics and Distributions
